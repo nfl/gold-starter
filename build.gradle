@@ -8,7 +8,6 @@ apply plugin: 'org.springframework.boot'
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
         mavenCentral()
     }
     dependencies {
