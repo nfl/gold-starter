@@ -30,7 +30,3 @@ dependencies {
 //    Until com.nfl.graphl:gold;1.0.0 is not uploaded to JCenter or Maven Central, using a local jars workaround:
     compile fileTree(dir: 'lib', include: ['*.jar'])
 }
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.2'
-}
