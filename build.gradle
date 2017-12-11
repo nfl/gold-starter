@@ -23,5 +23,5 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('com.nfl.graphl:gold;1.0.0')
+    compile('com.nfl.graphql:gold:1.0.0')
 }
