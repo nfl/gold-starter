@@ -9,6 +9,9 @@ buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
+        flatDir {
+            dirs 'lib'
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
@@ -23,5 +26,7 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('com.nfl.graphl:gold;1.0.0')
+//    compile('com.nfl.graphl:gold;1.0.0')
+//    Until com.nfl.graphl:gold;1.0.0 is not uploaded to JCenter or Maven Central, using a local jars workaround:
+    compile fileTree(dir: 'lib', include: ['*.jar'])
 }
