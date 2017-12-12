@@ -1,0 +1,46 @@
+mutation  {
+   upsertSchemaDefinition(schemaDef: {
+     name: "Pet",
+     idGeneration: Client,
+     domainFields: [{
+          memberType:      String,
+          memberFieldName: "name",
+          memberDescription: "The Name of the Pet"
+     },{
+         memberType:      Integer,
+         memberFieldName: "weight",
+         memberDescription: "How heavy."
+     },{
+         memberType:      Enum,
+         memberFieldName: "type",
+         memberDescription: "The kind of pet.",
+         enumValues: [{
+             name: "Dog",
+             value: "DOG"
+         }, {
+             name: "Cat",
+             value: "CAT"
+         }, {
+             name: "Bird",
+             value: "BIRD"
+         }, {
+            name: "Hampster",
+            value: "HAMPSTER"
+         }, {
+            name: "Snake",
+            value: "snake"
+         }, {
+            name: "Fish",
+            value: "FISH"
+         }]
+     }]
+   })
+   {
+     name,
+     domainFields {
+       memberType,
+       memberFieldName,
+       memberDescription
+     }
+   }
+ }
