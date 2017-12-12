@@ -26,7 +26,7 @@ public class SchemaDefinitionController extends BaseController {
         this.graphQLSchemaService = graphQLSchemaService;
     }
 
-    @RequestMapping(value = "/fe-store/definitions", method = {RequestMethod.GET, RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/gold/definitions", method = {RequestMethod.GET, RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> definitionsController(@RequestParam("query") String query) {
 
         SchemaWriteAccess mutablePerms = new SchemaWriteAccess();
