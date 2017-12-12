@@ -1,9 +1,9 @@
 mutation  {
   upsertSchemaInstance(schemaInstance: {
-    id: "bird1234",
-    name: "tweety",
-    weight: 4,
-    type: Bird
+    id: "larry1234",
+    name: "larry",
+    weight: 3,
+    type: Lizard
   })
   {
     id,
@@ -11,4 +11,4 @@ mutation  {
     weight,
     type
   }
- }
+}

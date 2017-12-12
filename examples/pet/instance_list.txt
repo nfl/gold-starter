@@ -1,6 +1,6 @@
 query {
    viewer {
-     instances(first:1, after:"c2ltcGxlLWN1cnNvci0x") {
+     instances {
        edges {
          node {
            id,
