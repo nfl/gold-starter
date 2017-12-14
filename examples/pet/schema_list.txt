@@ -1,0 +1,20 @@
+query {
+  viewer {
+    schemas {
+      edges {
+        node {
+          schemaKey {
+            schemaName
+          }
+          description
+          idGeneration,
+          domainFields {
+            memberType,
+            memberFieldName,
+            memberDescription
+          }
+        }
+      }
+    }
+  }
+}
