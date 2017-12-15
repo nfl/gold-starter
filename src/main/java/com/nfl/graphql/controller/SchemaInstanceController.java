@@ -32,6 +32,8 @@ public class SchemaInstanceController extends BaseController {
 
         SchemaWriteAccess mutablePerms = new SchemaWriteAccess();
         mutablePerms.addPermission(INSTANCE_NAMESPACE, SchemaWriteAccess.INSTANCE_MODIFY);
+        mutablePerms.addPermission(INSTANCE_NAMESPACE, SchemaWriteAccess.INSTANCE_DELETE);
+        mutablePerms.addPermission(INSTANCE_NAMESPACE, SchemaWriteAccess.INSTANCE_TRUNCATE);
 
         GraphQLResult result = graphQLInstanceService.executeQuery(query, buildVariablesMap(schemaName), mutablePerms, 8);
 
