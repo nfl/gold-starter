@@ -28,13 +28,12 @@ public class SchemaDefinitionController extends BaseController {
 
     @RequestMapping(value = "/gold/definitions",
             method = {RequestMethod.GET, RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> definitionsController(@RequestParam("query") String query,
-                            @RequestParam(value = "schemaName", required = false, defaultValue = "") String schemaName) {
+    public ResponseEntity<Object> definitionsController(@RequestParam("query") String query) {
 
         SchemaWriteAccess mutablePerms = new SchemaWriteAccess();
         mutablePerms.addPermission(SCHEMA_NAMESPACE, SchemaWriteAccess.SCHEMA_MODIFY);
 
-        GraphQLResult result = graphQLSchemaService.executeQuery(query, buildVariablesMap(schemaName), mutablePerms);
+        GraphQLResult result = graphQLSchemaService.executeQuery(query, buildVariablesMap(""), mutablePerms);
 
         // add a data container for the graphiql introspection query
         Map<String, Object> response = new LinkedHashMap<>();

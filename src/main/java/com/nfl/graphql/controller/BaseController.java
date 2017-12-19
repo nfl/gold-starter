@@ -12,7 +12,7 @@ import java.util.*;
 class BaseController {
 
     static final String SCHEMA_NAMESPACE = "GOLD_STARTER_SCHEMA_NAMESPACE";
-    static final String INSTANCE_NAMESPACE = "GOLD_STARTER_INSTANDE_NAMESPACE";
+    static final String INSTANCE_NAMESPACE = "GOLD_STARTER_INSTANCE_NAMESPACE";
 
 
     ResponseEntity<Object> buildSuccessResponse(Object data) {
