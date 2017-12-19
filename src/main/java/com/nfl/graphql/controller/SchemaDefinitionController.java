@@ -33,7 +33,7 @@ public class SchemaDefinitionController extends BaseController {
         SchemaWriteAccess mutablePerms = new SchemaWriteAccess();
         mutablePerms.addPermission(SCHEMA_NAMESPACE, SchemaWriteAccess.SCHEMA_MODIFY);
 
-        GraphQLResult result = graphQLSchemaService.executeQuery(query, buildVariablesMap(null), mutablePerms);
+        GraphQLResult result = graphQLSchemaService.executeQuery(query, buildVariablesMap(""), mutablePerms);
 
         // add a data container for the graphiql introspection query
         Map<String, Object> response = new LinkedHashMap<>();
