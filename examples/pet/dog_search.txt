@@ -4,10 +4,9 @@ query {
        edges {
          node {
            id,
-           type,
            name,
            weight,
-           weightUnit
+           type
          }
        }
      }

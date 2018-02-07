@@ -1,0 +1,16 @@
+mutation  {
+  upsertSchemaInstance(schemaInstance: {
+    id: "meow1234",
+    name: "Sylvester",
+    weight: 9,
+    weightUnit: pounds,
+    type: Cat
+  })
+  {
+    id,
+    name,
+    weight,
+    weightUnit,
+    type
+  }
+ }

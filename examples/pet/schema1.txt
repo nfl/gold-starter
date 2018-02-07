@@ -12,6 +12,26 @@ mutation  {
          memberDescription: "How heavy."
      },{
          memberType:      Enum,
+         memberFieldName: "weightUnit",
+         memberDescription: "The unit of the weight.  e.g. oz, lbs, grams etc.",
+         enumValues: [{
+             name: "tons",
+             value: "2_THOUSAND_POUNDS"
+         }, {
+             name: "pounds",
+             value: "POUNDS"
+         }, {
+             name: "ounces",
+             value: "OUNCES"
+         }, {
+             name: "kilos",
+             value: "KILOGRAMS"
+         }, {
+            name: "grams",
+            value: "GRAMS"
+         }]
+     },{
+         memberType:      Enum,
          memberFieldName: "type",
          memberDescription: "The kind of pet.",
          enumValues: [{
@@ -33,6 +53,11 @@ mutation  {
             name: "Fish",
             value: "FISH"
          }]
+     }],
+     filterConfigurations: [{
+         fieldName: "type",
+         filterName: "kindaOfPet",
+         filterOperator: EQUALS
      }]
    })
    {

@@ -10,7 +10,28 @@ mutation  {
          memberType:      Integer,
          memberFieldName: "weight",
          memberDescription: "How heavy."
-     },{
+        },{
+          memberType:      Enum,
+          memberFieldName: "weightUnits",
+          memberDescription: "The units of the weight.  e.g. oz, lbs, grams etc.",
+          enumValues: [{
+              name: "tons",
+              value: "2_THOUSAND_POUNDS"
+          }, {
+              name: "pounds",
+              value: "POUNDS"
+          }, {
+              name: "ounces",
+              value: "OUNCES"
+          }, {
+              name: "kilos",
+              value: "KILOGRAMS"
+          }, {
+             name: "grams",
+             value: "GRAMS"
+          }]
+        }
+        },{
          memberType:      Enum,
          memberFieldName: "type",
          memberDescription: "The kind of pet.",

@@ -1,6 +1,6 @@
 query {
    viewer {
-     instances {
+     instances(filters: {kindaOfPet: Dog}) {
        edges {
          node {
            id,
