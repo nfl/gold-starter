@@ -1,0 +1,74 @@
+mutation  {
+   upsertSchemaDefinition(schemaDef: {
+     name: "Pet",
+     idGeneration: Client,
+     domainFields: [{
+          memberType:      String,
+          memberFieldName: "name",
+          memberDescription: "The Name of the Pet"
+     },{
+         memberType:      Integer,
+         memberFieldName: "weight",
+         memberDescription: "How heavy."
+        },{
+          memberType:      Enum,
+          memberFieldName: "weightUnits",
+          memberDescription: "The units of the weight.  e.g. oz, lbs, grams etc.",
+          enumValues: [{
+              name: "tons",
+              value: "2_THOUSAND_POUNDS"
+          }, {
+              name: "pounds",
+              value: "POUNDS"
+          }, {
+              name: "ounces",
+              value: "OUNCES"
+          }, {
+              name: "kilos",
+              value: "KILOGRAMS"
+          }, {
+             name: "grams",
+             value: "GRAMS"
+          }]
+        },{
+         memberType:      Enum,
+         memberFieldName: "type",
+         memberDescription: "The kind of pet.",
+         enumValues: [{
+             name: "Dog",
+             value: "DOG"
+         }, {
+             name: "Cat",
+             value: "CAT"
+         }, {
+             name: "Bird",
+             value: "BIRD"
+         }, {
+            name: "Hampster",
+            value: "HAMPSTER"
+         }, {
+            name: "Snake",
+            value: "snake"
+         }, {
+            name: "Fish",
+            value: "FISH"
+         }, {
+            name: "Lizard",
+            value: "LIZARD"
+         }]
+        },{
+         memberType:    Array
+         memberFieldName: "eats"
+         memberDescription: "Other Pets in Peril"
+         arrayEntryType:  AnotherInstanceReference
+        }]
+   })
+   {
+     name,
+     domainFields {
+       memberType,
+       memberFieldName,
+       memberDescription
+     }
+   }
+ }
