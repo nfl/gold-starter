@@ -12,7 +12,7 @@ mutation  {
          memberDescription: "How heavy."
         },{
           memberType:      Enum,
-          memberFieldName: "weightUnits",
+          memberFieldName: "weightUnit",
           memberDescription: "The units of the weight.  e.g. oz, lbs, grams etc.",
           enumValues: [{
               name: "tons",
